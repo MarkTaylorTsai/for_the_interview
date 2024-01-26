@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lato&family=Montserrat:wght@500&family=Open+Sans:wght@300&family=Playfair+Display:wght@500&family=Roboto+Slab:wght@500&display=swap');
+
+body {
+  font-family: sans-serif;
+  background: #363C2B;
+}
+
+#editIcon {
+  color: #91A074;
+  position: absolute;
+  right: 100px;
+  bottom: 100px;
+  cursor: pointer;
+}
+
+#square {
+  border: 5px solid #91A074;
+  border-radius: 10px;
+}
+
+#circle2 {
+  border: 3px solid #91A074;
+  border-radius: 50%;
+}
+
+.circle5 span{
+	background-color: #91A074;
+  color: #91A074;
+  position: absolute;
+}
+#time {
+  font-size: 30px;
+  position: absolute;
+  right: 170px;
+  bottom: 60px;
+  color: #91A074;
+}
+
+#dateTime {
+  font-family: 'Cookie', cursive;
+  position: absolute;
+  left: 450px;
+  top: 100px;
+  color: #91A074;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 100px;
+}
+
+.circle5 {
+  position: relative;
+  top: '325px';
+  left: '500px';
+  color: #91A074;
+  width: 280px; 
+  height: 280px; 
+  border-radius: 50%; 
+  border: 5px dotted #91A074;
+}
+
+#circle {
+  position: absolute;
+  left: 339px;
+  top: 90px;
+  color: #91A074;
+  width: 280px; /* or any size you want */
+  height: 280px; /* should be the same as width to create a circle */
+  border-radius: 50%; /* this makes it round */
+  border: 8px dotted #91A074;
+}
+
+#year {
+  margin-bottom: -30px;
+  font-size: 1.5em;
+
+}
+
+#month {
+  font-size: 1.3em;
+  margin-bottom: -60px;
+
+}
+
+#moon {
+  font-size: 20px;
+}
+
+#day {
+  font-size: 150px;
+
+}
