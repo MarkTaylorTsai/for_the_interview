@@ -14,6 +14,21 @@ body {
   cursor: pointer;
 }
 
+.xmark {
+  position: relative;
+  left: 40%;
+  top: 23px;
+  cursor: pointer;
+}
+
+.tick {
+  position: relative;
+  left: 40%;
+  top: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 #square {
   border: 5px solid #91A074;
   border-radius: 10px;
@@ -48,6 +63,27 @@ body {
   align-items: center; 
   justify-content: center; 
   width: 100px;
+  z-index: 1
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin-top: 60px ;
+}
+
+.input-style {
+  width: 60px; 
+  height: 30px; 
+  font-size: 16px;
+  text-align: left;
+  border: 1px solid #ccc; 
+  border-radius: 10px;
+  margin: 0; 
+  padding: 4px; 
+  background-color: #CDD3C1; 
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); 
 }
 
 .circle5 {
@@ -66,9 +102,9 @@ body {
   left: 339px;
   top: 90px;
   color: #91A074;
-  width: 280px; /* or any size you want */
-  height: 280px; /* should be the same as width to create a circle */
-  border-radius: 50%; /* this makes it round */
+  width: 280px; 
+  height: 280px; 
+  border-radius: 50%; 
   border: 8px dotted #91A074;
 }
 

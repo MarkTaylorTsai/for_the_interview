@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaEdit, PiTriangleThin } from "../style/Icon";
+import { FaEdit, PiTriangleThin, FaXmark, GiCheckMark } from "../style/Icon";
 import "../style/ClockStyling.css";
 import DashedCircle from '../style/circle'
 import {getRotationStyle, getRotationForCircle1, getRotationForCircle, getRotationForTriangle, getRotationForSquare} from '../style/rotation'
@@ -80,21 +80,36 @@ const Clock = () => {
       </div>
       <FaEdit id="editIcon" onClick={openDialog} size='30px'/>
       {isDialogOpen && (
-        <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', padding: '20px', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)' }}>
-          <div>
-            <label>小時：</label>
-            <input type="number" value={customHour} onChange={(e) => setCustomHour(e.target.value)} />
+        <div style={{ 
+          position: 'fixed', 
+          top: '50%', 
+          left: '50%', 
+          transform: 'translate(-50%, -50%)', 
+          padding: '20px', 
+          backgroundColor: '#819064', 
+          borderRadius: '8px', 
+          boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+          zIndex: '2',
+          width: '300px',
+          height: '150px'
+          }}>
+          <div className='label'>
+          <label style={{
+            position: 'fixed',
+            top: '5%', 
+            left: '5%', 
+            marginBottom: '5px'
+          }}>時間調整</label>
+            <input  type="number" className='input-style' value={customHour} onChange={(e) => setCustomHour(e.target.value)} />
+            <label >時</label>
+            <input type="number" className='input-style' value={customMinute} onChange={(e) => setCustomMinute(e.target.value)} />
+            <label >分</label>
+            <input type="number" className='input-style' value={customSecond} onChange={(e) => setCustomSecond(e.target.value)} />
+            <label >秒</label>
           </div>
-          <div>
-            <label>分鐘：</label>
-            <input type="number" value={customMinute} onChange={(e) => setCustomMinute(e.target.value)} />
-          </div>
-          <div>
-            <label>秒：</label>
-            <input type="number" value={customSecond} onChange={(e) => setCustomSecond(e.target.value)} />
-          </div>
-          <button onClick={setCustomTime}>確定</button>
-          <button onClick={closeDialog}>取消</button>
+          <FaXmark className="xmark" onClick={closeDialog} size='30px'/>
+          <GiCheckMark className="tick" onClick={setCustomTime} size='30px'/>
+
         </div>
       )}
     </div>
